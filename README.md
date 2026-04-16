@@ -31,7 +31,33 @@ flowchart LR
 
 A shared kernel provides the workflow, evidence binding and security boundaries. Client-specific configuration adapts forms, questions, report structure and policies for a particular review use case.
 
-![Shared kernel and client pack](./docs/media/03-kernel-and-client-pack.png)
+```mermaid
+flowchart LR
+    subgraph K["Shared kernel"]
+        direction TB
+        K1[Case and submission workflow]
+        K2[Security and access rules]
+        K3[Evidence and audit model]
+        K4[Review and reporting flow]
+        K5[Stored continuity across the case]
+    end
+    subgraph P["Client pack"]
+        direction TB
+        P1[Forms and validation]
+        P2[Question sets and prompts]
+        P3[Report structure]
+        P4[Policy settings]
+        P5[Workflow emphasis for a use case]
+    end
+    subgraph C["Configured product"]
+        direction TB
+        C1[Inbound review workspace]
+        C2[Case-specific workflow]
+        C3[Evidence-linked outputs]
+    end
+    K --> C
+    P --> C
+```
 
 ## Demo
 
