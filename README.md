@@ -8,6 +8,8 @@ This repository is the public-facing package prepared for the University of Kent
 
 LumiSense turns inbound submissions into evidence-backed summaries and reports that can be refined in chat without losing sources or version history.
 
+![Business model canvas prepared for the ASPIRE application](./assets/canvas-preview.png)
+
 ## How it works
 
 A case is opened. The submitter uploads files and answers follow-up questions. Content is extracted, anchored to the source and made searchable inside the case. The reviewer gets a summary or a structured report in which every claim links to underlying evidence. Follow-up questions and refinements stay attached to the same case, and outputs are versioned.
@@ -24,6 +26,12 @@ flowchart LR
     F --> G[Evidence-linked output]
     G --> H[Versioned result stays attached to the case]
 ```
+
+## Product shape
+
+A shared kernel provides the workflow, evidence binding and security boundaries. Client-specific configuration adapts forms, questions, report structure and policies for a particular review use case.
+
+![Shared kernel and client pack](./docs/media/03-kernel-and-client-pack.png)
 
 ## Demo
 
