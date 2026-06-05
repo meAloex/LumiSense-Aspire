@@ -2,9 +2,16 @@
 
 Secure AI workspace for evidence-backed review of inbound submissions.
 
+**Author:** Daniil Burmistrov, University of Kent (`meAloex` on GitHub).
+
 LumiSense helps teams turn messy external material - applications, pitch decks, PDFs, forms, emails, interviews, images, audio and video - into structured review cases with source-backed summaries, criteria coverage, report drafts, version history and a human-owned decision trail.
 
 This repository is the public ASPIRE package. The engineering repository is private. Everything here is sanitized: no internal code, no customer data, no provider secrets and no production infrastructure details.
+
+## Demo Links
+
+- [Front-end walkthrough, earlier build](https://youtu.be/bK4r3rzLW0U)
+- [Benchmark run across document, image and video inputs](https://youtu.be/AmsceiSERGo)
 
 ![LumiSense evidence-linked review workspace](./assets/screenshots/05-evidence-drawer.png)
 
