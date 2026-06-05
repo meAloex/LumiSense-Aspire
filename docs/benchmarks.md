@@ -21,6 +21,22 @@ Expected outputs for every pinned asset were authored by hand against the produc
 
 This is why the public-core pack is smaller than a lab-grade benchmark at this stage. Authoring oracle data is the most time-consuming part of the work and it scales case by case. The pack will keep growing.
 
+## Validation harness
+
+The benchmark lane is built to check the review system end to end, not just whether a model can answer a prompt. A run can exercise intake, extraction, canonical content, chunking, indexing, retrieval and report/citation verification against pinned public material.
+
+The oracle checks focus on product-specific truth:
+
+- whether the expected content was extracted from the right source
+- whether chunks preserve source maps and anchors
+- whether transcript segments keep temporal anchors for audio and video
+- whether multilingual material remains searchable and citable
+- whether retrieved passages belong to the current case
+- whether cited quotes exist in the source and resolve to the right anchor
+- whether unsupported claims are blocked from formal report output
+
+Failures are kept visible. If a chunking tolerance, retrieval rank, projection bridge or citation check is not good enough, it is tracked as open quality work rather than hidden behind a demo.
+
 ## Coverage matrix
 
 | Modality | Cases pinned | Languages | Status |

@@ -36,6 +36,14 @@ Extraction is not a single provider. Multiple lanes run in parallel, and a polic
 
 The searchable layer is built from canonical content, not from raw uploads. Retrieval combines vector, keyword and graph signals and returns passages that can be hydrated back to their source element.
 
+### Memory and context continuity layer
+
+Memory is represented as structured case state. A context manifest records how each answer was assembled: ordered context segments, included and dropped history, retrieval budget, available evidence refs, citable refs, and provider-visible message hashes.
+
+Graph-aware memory connects claims, source anchors, criteria, reviewer feedback, report versions and open risks. Feedback and observations are attached to stable graph-unit keys, so memory can survive rebuilds when semantic identity is preserved. Ambiguous carry-forward is quarantined rather than silently trusted.
+
+This layer does not replace citable evidence. A source-bound summary or remembered graph relationship can guide retrieval and continuity, but formal answers and reports still need source-resolving evidence references.
+
 ### Chat and report workflow
 
 The same case supports question answering, follow-up analysis and formal report generation. Conversation history, evidence references and versioned outputs all live in the case. Review work stays tied to the case instead of disappearing into isolated prompts.
